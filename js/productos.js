@@ -36,20 +36,20 @@ createApp({
           this.error = true;
         });
     },
-    eliminar(producto) {
-      /* El método eliminar toma un parámetro producto y construye la URL para eliminar ese producto en particular. Luego, realiza una solicitud fetch utilizando el método HTTP DELETE a la URL especificada. Después de eliminar el producto, la página se recarga para reflejar los cambios.
-       */
-      // Construye la URL para eliminar el producto especificado
-      const url = this.url + "/" + producto;
-      var options = {
-        method: "DELETE", // Establece el método HTTP como DELETE
-      };
-      fetch(url, options)
-        .then((res) => res.text()) // Convierte la respuesta en texto (or res.json())
-        .then((res) => {
-          location.reload(); // Recarga la página actual después de eliminar el producto
-        });
-    },
+    // eliminar(producto) {
+    //   /* El método eliminar toma un parámetro producto y construye la URL para eliminar ese producto en particular. Luego, realiza una solicitud fetch utilizando el método HTTP DELETE a la URL especificada. Después de eliminar el producto, la página se recarga para reflejar los cambios.
+    //    */
+    //   // Construye la URL para eliminar el producto especificado
+    //   const url = this.url + "/" + producto;
+    //   var options = {
+    //     method: "DELETE", // Establece el método HTTP como DELETE
+    //   };
+    //   fetch(url, options)
+    //     .then((res) => res.text()) // Convierte la respuesta en texto (or res.json())
+    //     .then((res) => {
+    //       location.reload(); // Recarga la página actual después de eliminar el producto
+    //     });
+    // },
     grabar() {
       /* El método grabar se encarga de guardar los datos de un nuevo producto en el servidor. Primero, se crea un objeto producto con los datos ingresados en el formulario. Luego, se configuran las opciones para la solicitud fetch, incluyendo el cuerpo de la solicitud como una cadena JSON, el método HTTP como POST y el encabezado Content-Type como application/json. Después, se realiza la solicitud fetch a la URL especificada utilizando las opciones establecidas. Si la operación se realiza con éxito, se muestra un mensaje de éxito y se redirige al usuario a la página de productos. Si ocurre algún error, se muestra un mensaje de error.
        */
