@@ -56,7 +56,7 @@ createApp({
       fetch(this.url, options)
         .then(function () {
           alert("Registro actualizado!");
-          window.location.href = "./index.html";
+          window.location.href = "./productos-update.html";
         })
         .catch((err) => {
           console.error(err);
