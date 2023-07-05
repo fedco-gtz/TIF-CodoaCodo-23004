@@ -53,6 +53,7 @@
                         <div class="spinner-border"></div>
                         <p>Cargando...</p>
                     </section>
+                    <input type="search" placeholder="Buscar producto" class="buscador form-control mb-4" id="buscador" name="buscador">
                     <section v-else>
                         <div class="table-responsive">
                             <table class="table table-bordered">
@@ -68,7 +69,7 @@
                                 </thead>
                                 <tbody>
                                     <!-- Iterar sobre cada producto -->
-                                    <tr class="" v-for="producto in productos">
+                                    <tr class="prod" v-for="producto in productos">
                                         <td scope="row">{{producto.id}}</td>
                                         <td>{{producto.nombre}}</td>
                                         <td>{{producto.precio}}</td>
@@ -117,6 +118,7 @@
             crossorigin="anonymous"></script>
         <!-- <script src="./js/main.js"></script> -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Enlace de VUE-->
+        <script src="./js/producto-buscar.js"></script>
         <script src="./js/productos.js"></script>
 </body>
 
