@@ -7,7 +7,7 @@ document.addEventListener('keyup', e => {
         //         producto.classList.add('filtro')
         //    }
         
-           producto.textContent.toLocaleLowerCase().includes(e.target.value)
+           producto.textContent.toLocaleLowerCase().includes(e.target.value.toLowerCase())
            ? producto.classList.remove('filtro')
            : producto.classList.add('filtro');
         })
