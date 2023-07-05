@@ -25,7 +25,7 @@ createApp({
         });
     },
     eliminar(id) {
-      if (confirm("¿Está seguro que desea eliminar el producto de id " + id + " ?")) {
+      if (confirm("¿Está seguro que desea eliminar el producto seleccionado?")) {
         const url = "https://fedco.pythonanywhere.com/productos/" + id;
         var options = {
           method: "DELETE", // Establece el método HTTP como DELETE
@@ -34,7 +34,7 @@ createApp({
         fetch(url, options)
           .then((res) => res.text()) // Convierte la respuesta en texto (or res.json())
           .then((res) => {
-            alert("Producto eliminado!");
+            // alert("Producto eliminado!");
             location.reload(); // Recarga la página actual después de eliminar el producto
           });
       }
